@@ -12,8 +12,11 @@ end
 get '/secret' do
     "Hey BOIIII"
 end
-
-get '/named-memes' do
+get '/meme-form' do
+  erb :meme_form
+end
+post '/named-memes' do
+  p params
   @name = params[:name]
   erb :index
 end
